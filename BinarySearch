@@ -1,0 +1,35 @@
+/*
+*二分法查找数据
+*前提数据已经拍好顺序
+*/
+
+/*
+*递归实现
+*/
+int binarySearch(int[] arr,int low，int high，int key){
+if(arr == null ||arr.length <1) return -1;
+int mid = (low + high)/2;
+if(arr[mid] == key) return mid;
+else if(arr[mid] < key) return binarySearch(arr,mid,high,key);
+else return binarySearch(arr,low,mid,key);
+} 
+
+/*
+*非递归实现
+*/
+int binarysearch(int[] arr,int length,int key){
+if(arr == null || arr.length<1) return -1;
+int low = 0;
+int high = length-1;
+int mid = (low+high)/2;
+while(low <= high){
+if(arr[mid] == key) return mid;
+else if(arr[mid] < key){
+low = mid;
+mid = (low + high)/2;
+}else{
+high = mid;
+mid = (low + high)/2;
+}
+}
+}
