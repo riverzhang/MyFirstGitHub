@@ -1,24 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
- <head>
-  <title> new document </title>
-  <meta name="generator" content="editplus" />
-  <meta name="author" content="" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
- </head>
+---
+layout: default
+title: A guide to your digital life
+---
 
- <body>
-  
+<div class="listing">
+    {% for post in paginator.posts %}
+    <div class="post other link">
+      <h2><span class="mega-octicon octicon-flame" style="min-width: 32px;"></span><a href="/white-paper{{post.url}}">{{ post.title }}</a></h2>
+      <p class="post-date">{{ post.date | date_to_string }}</p>
 
-    　　---
-    　　layout: default
-    　　title: 我的Blog
-    　　---
-
-
-    　　<p>hello world</p>
-
-
- </body>
-</html>
+      <p>{{ post.excerpt }}</p>
+    </div>
+    {% endfor %}
+</div>
