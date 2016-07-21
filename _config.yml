@@ -19,9 +19,9 @@ language: en
 icons:
   rss: true
   email:
-  github: ttskch
+  github: riverzzz
   bitbucket:
-  twitter: ttskch
+  twitter: riverzzz
   facebook:
   google_plus:
   tumblr:
@@ -78,7 +78,7 @@ share_buttons:
   facebook: false # needs ogp.fb.app_id
   hatena: false
 ogp:
-  image_url: //ttskch.github.io/jekyll-tch-theme/assets/img/ogp.png
+  image_url: //riverzzz.github.io/MyFirstGitHub/assets/img/ogp.png
   fb:
     admin: # facebook admin id
     app_id: # facebook application id
